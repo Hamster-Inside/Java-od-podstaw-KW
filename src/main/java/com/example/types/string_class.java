@@ -31,6 +31,9 @@ public class string_class {
         if (str3.contentEquals(potato)){
             System.out.println("contentEquals = TRUE");
         }
+        else{
+            System.out.println("contentEquals = FALSE");
+        }
 
 
     }
