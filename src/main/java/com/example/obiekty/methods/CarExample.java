@@ -1,4 +1,4 @@
-package com.example.obiekty;
+package com.example.obiekty.methods;
 
 class Car{
     String manufacturer;
