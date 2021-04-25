@@ -1,0 +1,73 @@
+package com.example.swing;
+
+import javax.swing.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+
+public class MouseMotionListenerExample extends JFrame
+        implements MouseListener {
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        System.out.println("Mouse Clicked");
+        System.out.println("Click count: " + e.getClickCount());
+        System.out.println("Screen x: " + e.getXOnScreen());
+        System.out.println("Screen y: " + e.getYOnScreen());
+
+        String str = "Button clicked: ";
+        switch (e.getButton()) {
+            case MouseEvent.BUTTON1:
+                str += "button1";
+                break;
+            case MouseEvent.BUTTON2:
+                str += "button2";
+                break;
+            case MouseEvent.BUTTON3:
+                str += "button3";
+                break;
+        }
+        System.out.println(str);
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        System.out.println("Mouse Pressed");
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        System.out.println("Mouse Released");
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        System.out.println("Mouse Entered");
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        System.out.println("Mouse Exited");
+    }
+
+    public static void main(String[] args) {
+
+        MouseMotionListenerExample frame = new MouseMotionListenerExample();
+        frame.addMouseListener(frame);
+        frame.addMouseMotionListener(new MouseMotionListener() {
+            @Override
+            public void mouseDragged(MouseEvent e) {
+                System.out.println("Mouse Dragged");
+            }
+
+            @Override
+            public void mouseMoved(MouseEvent e) {
+                System.out.println("Mouse Moved ->   X: " + e.getX() + " Y: " + e.getY());
+
+            }
+        });
+        frame.setSize(300, 200);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
+}
