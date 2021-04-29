@@ -9,8 +9,6 @@
         <module name="2021-04-01-Java-od-podstaw-KW" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11">
-      <module name="2021-04-01-Java-od-podstaw-KW" target="11" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="11" />
   </component>
 </project>

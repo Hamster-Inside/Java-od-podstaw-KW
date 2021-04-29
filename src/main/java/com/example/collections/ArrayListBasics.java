@@ -6,7 +6,7 @@ import java.util.Collections;
 public class ArrayListBasics {
     public static void main(String[] args) {
         int a = 0;
-        ArrayList basicList = new ArrayList();
+        ArrayList<String> basicList = new ArrayList<>();
         basicList.add(new String("test"));
         basicList.add("Info");
         String strEl = (String)basicList.get(0);
